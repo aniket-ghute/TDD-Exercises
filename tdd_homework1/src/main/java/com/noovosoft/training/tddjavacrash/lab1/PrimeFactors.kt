@@ -1,0 +1,20 @@
+package com.noovosoft.training.tddjavacrash.lab1
+
+fun calculatePrimeFactors(number: Int): List<Int> {
+    val primeFactors = mutableListOf<Int>()
+    var divisor = 2
+    var num = number
+    if (number <= 1) {
+        return listOf()
+    }
+
+    while (num > 1) {
+        if (num % divisor == 0) {
+            primeFactors.add(divisor)
+            num /= divisor
+        } else {
+            divisor += if (divisor == 2) 1 else 2
+        }
+    }
+    return primeFactors.toList()
+}
