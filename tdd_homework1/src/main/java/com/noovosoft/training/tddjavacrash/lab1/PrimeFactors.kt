@@ -16,5 +16,5 @@ fun calculatePrimeFactors(number: Int): List<Int> {
             divisor += if (divisor == 2) 1 else 2
         }
     }
-    return primeFactors.toList()
+    return primeFactors
 }

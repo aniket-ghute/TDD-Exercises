@@ -13,6 +13,11 @@ class FibonacciTest {
         Assertions.assertEquals(expectedValue, findFibonacci(Input))
     }
 
+    @ParameterizedTest
+    @MethodSource("provide test case data to FibonacciTest")
+    fun `testing function to calculate fibonacci of a number by recursive method`(expectedValue: Int, Input: Int) {
+        Assertions.assertEquals(expectedValue, recursiveFibonacci(Input))
+    }
     companion object {
         @JvmStatic
         fun `provide test case data to FibonacciTest`(): Stream<Arguments> =

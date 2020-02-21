@@ -13,3 +13,11 @@ fun findFibonacci(number: Int): Int {
     }
     return current
 }
+
+fun recursiveFibonacci(number: Int): Int {
+    return when(number) {
+        0 ->  0
+        1 ->  1
+        else ->  recursiveFibonacci(number-1) + recursiveFibonacci(number-2)
+    }
+}

@@ -13,4 +13,3 @@ fun calculateFactorial(number: Int): Int {
     }
     return factorial
 }
-
